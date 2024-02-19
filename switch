@@ -1,0 +1,76 @@
+#include <iostream>
+
+using namespace std;
+
+int suma(int num1, int num2);
+int resta(int num1, int num2);
+int multiplicacion(int num1, int num2);
+
+int main()
+{
+    
+int opcion,num1,num2; 
+   do{ 
+   cout<<"MENU"<<endl;
+   cout<<"1.- Suma de dos numeros"<<endl;
+   cout<<"2.- resta de dos numeros"<<endl;
+   cout<<"3.- multiplicacion de dos numeros"<<endl;
+   cout<<"0.- salir"<<endl;
+   cin>>opcion; 
+   
+   switch(opcion)
+{
+    case 1:{ cout<<"ingrese un numero: "<<endl;
+    cin>>num1;
+    cout<<"ingrese otro numero: "<<endl;
+    cin>>num2;
+    cout<<suma(num1,num2)<<endl;
+    }
+    break;
+    
+    case 2:{ cout<<"ingrese un numero: "<<endl;
+    cin>>num1;
+    cout<<"ingrese otro numero: "<<endl;
+    cin>>num2;
+    cout<<resta(num1,num2)<<endl;}
+    break; 
+     
+    case 3:{cout<<"ingrese un numero: "<<endl;
+    cin>>num1;
+    cout<<"ingrese otro numero: "<<endl;
+    cin>>num2;
+    cout<<multiplicacion(num1,num2)<<endl;    
+    }
+    break; 
+    
+    case 0: cout<<"el programa ha terminado"<<endl;
+    break;
+    
+    default: cout<<"porfavor ingrese una opcion valida"<<endl; 
+    
+}
+}while(opcion!=0);
+    return 0;
+}
+
+int suma(int num1, int num2)
+{
+    int suma; 
+    suma=num1+num2;
+    cout<<"el resultado de la suma es: "<<suma<<endl;
+    return suma; 
+}
+int resta(int num1, int num2)
+{
+    int resta;
+    resta=num1-num2;
+    cout<<"el resultado de la suma es: "<<resta<<endl;
+    return resta; 
+}
+int multiplicacion(int num1, int num2)
+{
+    int multiplicacion; 
+    multiplicacion=num1*num2;
+    cout<<"el resultado de la multiplicacion es: "<<multiplicacion<<endl;
+    return multiplicacion; 
+}
